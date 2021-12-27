@@ -1,6 +1,7 @@
 import { Algo1 } from "./index";
 import { getBoard } from "./BoggleBoard";
-const wordArray: string[] = require('words-en').split('\n')
+import { getLegalWords } from "./BoggleWords";
+const wordArray = getLegalWords();
 
 const board = getBoard();
 console.log(board);

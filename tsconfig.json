@@ -23,7 +23,6 @@
   ],
   "include": [
     "src/**/*.ts",
-    "index.ts",
-    "boggleSample.ts"
+    "*.ts"
   ],
 }
