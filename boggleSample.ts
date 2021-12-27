@@ -25,8 +25,8 @@ if (boardLetters) {
     if (splitQU.length === 1) {
         rolls = boardLetters.split("");
     } else {
-        rolls = ["qu"];
-        rolls = rolls.concat(splitQU[0].split(""));
+        rolls = splitQU[0].split("");
+        rolls.push("qu");
         rolls = rolls.concat(splitQU[1].split(""));
     }
     board = getBoardFromRolls(rolls);
