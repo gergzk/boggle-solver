@@ -21,12 +21,16 @@ export const allTheDice = [
 
 export function getBoard() {
     const deck = new Deck(allTheDice).shuffle();
-    const roll = deck.elements.map(dice => dice.roll());
+    const rolls = deck.elements.map(dice => dice.roll());
+    return getBoardFromRolls(rolls);
+}
+
+export function getBoardFromRolls(rolls: any[]) {
     const sq: string[][] = [];
     for (let i = 0; i < 4; i++) {
         const r = [];
         for (let j = 0; j < 4; j++) {
-            r.push(roll[i*4+j]);
+            r.push(rolls[i*4+j]);
         }
         sq.push(r);
     }
