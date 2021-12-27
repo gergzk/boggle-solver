@@ -1,4 +1,6 @@
+import { dictionary } from "./dictionary";
+
 export function getLegalWords() {
-    const wordArray: string[] = require('words-en').split('\n');
+    const wordArray: string[] = Object.keys(dictionary);
     return wordArray;
 }
