@@ -2,8 +2,7 @@ import { getBoard } from "./BoggleBoard";
 import { getLegalWords } from "./BoggleWords";
 import { Algo1 } from "./src/algorithms/Algo1";
 
-
-const samples = 10000;
+const samples = parseInt(process.argv[2]) || 1000;
 const stats: { sum: number, count: number}[] = [];
 const sampleWords: { [x: number]: string} = {};
 for (let s = 0; s < 17; s++) {
