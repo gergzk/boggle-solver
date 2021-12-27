@@ -22,9 +22,8 @@ const allTheDice = [
 ];
 
 // so this is the set of dice
-const d1 = new Deck(allTheDice);
-const d2 = d1.shuffle();
-const roll = d2.elements.map(dice => dice.roll());
+const deck = new Deck(allTheDice).shuffle();
+const roll = deck.elements.map(dice => dice.roll());
 const sq: string[][] = [];
 for (let i = 0; i < 4; i++) {
     const r = [];

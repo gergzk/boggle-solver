@@ -6,7 +6,7 @@ export class Algo1 {
     legalStarts: { [x:string]: boolean } = {};
     constructor(legalWords: string[]) {
         this.legalWords = {};
-        legalWords.forEach(word => { this.legalWords[word] = true; });
+        legalWords.forEach(word => { this.legalWords[word] = word.length >= 3; });
     }
 
     findWords(board: Board): string[] {

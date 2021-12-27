@@ -28,7 +28,13 @@ describe("Algo1", () => {
             const words = a.findWords(b);
             expect(words).toEqual(["cat"]);
         });
-        test("Finds each words", () => {
+        test("Finds each word", () => {
+            const a = new Algo1(["a", "an", "and", "band"]);
+            const b = new Board([["b", "a"],["n", "d"]]);
+            const words = a.findWords(b);
+            expect(words).toEqual(["and", "band"]);
+        });
+        test("Words under 3 letters filtered out", () => {
             const a = new Algo1(["cat", "car", "card", "rad"]);
             const b = new Board([["c", "a"],["r", "d"]]);
             const words = a.findWords(b);
