@@ -1,6 +1,7 @@
+import { Bar } from "./src/Bar";
 export class Foo {
-    bar: number;
+    bar: Bar;
     constructor() {
-        this.bar = 3;
+        this.bar = new Bar();
     }
 }

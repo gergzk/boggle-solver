@@ -1,7 +1,7 @@
 {
     "linterOptions": {
         "exclude": [
-            "src/**/*.unit.ts",
+            "src/**/*.test.ts",
             "src/mocks/*"
         ]
     },
