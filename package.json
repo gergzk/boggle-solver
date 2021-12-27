@@ -79,7 +79,6 @@
   },
   "dependencies": {
     "@types/node": "^17.0.5",
-    "fs": "^0.0.1-security",
-    "word-list": "^3.1.0"
+    "words-en": "^2.0.0"
   }
 }

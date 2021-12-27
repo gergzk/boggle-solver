@@ -24,6 +24,6 @@
   "include": [
     "src/**/*.ts",
     "index.ts",
-    "boggle.ts"
+    "boggleSample.ts"
   ],
 }
