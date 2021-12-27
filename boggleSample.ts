@@ -2,6 +2,20 @@ import { Algo1 } from "./index";
 import { getBoard, getBoardFromRolls } from "./BoggleBoard";
 import { getLegalWords } from "./BoggleWords";
 const wordArray = getLegalWords();
+console.log(`Loading dictionary with ${wordArray.length} words`);
+
+
+function printWords(wordList: string[]) {
+    console.log(`Found ${wordList.length} words:`);
+
+    for (let len = 16; len > 0; len--) {
+        const match = wordList.filter(w => w.length === len);
+        if (match.length > 0) {
+            console.log(`${len} (${match.length}): ${match.join(", ")}`);
+        }
+    }
+}
+
 
 const boardLetters = process.argv[2];
 let board;
@@ -19,10 +33,11 @@ if (boardLetters) {
 } else {
     board = getBoard();
 }
-console.log(board);
+console.log(board.squares);
 const algo = new Algo1(wordArray);
 const found = algo.findWords(board);
 const sortedFound = found.sort((a,b) => b.length - a.length);
-console.log(`Found ${sortedFound.length} words:`)
-sortedFound.forEach(w => console.log(w));
+
+printWords(sortedFound);
+
 
