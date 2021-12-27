@@ -54,6 +54,7 @@ export class Algo1 {
     private initialize() {
         if (this.initialized) { return; }
         Object.keys(this.legalWords).forEach(word => this.initWord(word));
+        this.initialized = true;
     }
     private initWord(word: string) {
         for(let i = 1; i < word.length; i++) {

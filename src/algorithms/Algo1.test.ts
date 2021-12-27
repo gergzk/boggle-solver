@@ -46,5 +46,12 @@ describe("Algo1", () => {
             const words = a.findWords(b);
             expect(words).toEqual([]);
         });
+        test("Re-run works", () => {
+            const a = new Algo1(["carr"]);
+            const b = new Board([["c", "a"],["r", "d"]]);
+            const words1 = a.findWords(b);
+            const words2 = a.findWords(b);
+            expect(words1).toEqual(words2);
+        });
     });
 });
