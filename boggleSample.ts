@@ -10,13 +10,21 @@ function printWords(wordList: string[]) {
 
     for (let len = 16; len > 0; len--) {
         const match = wordList.filter(w => w.length === len);
-        if (match.length > 0) {
-            console.log(`${len} (${match.length}): ${match.join(", ")}`);
+        let out = `${len} (${match.length}):\t`;
+        while (match.length > 0) {
+            while (out.length < outWidth - len - 1 && match.length > 0) {
+                out += match.shift();
+                if (match.length > 0) {
+                    out += ", ";
+                }
+            }
+            console.log(out);
+            out = "\t";
         }
     }
 }
 
-
+const outWidth = 80;
 const boardLetters = process.argv[2];
 let board;
 if (boardLetters) {
