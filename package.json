@@ -10,7 +10,10 @@
     "test": "jest",
     "start": "tsc --watch",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
-    "coverage": "coverage\\lcov-report\\index.html"
+    "coverage": "coverage\\lcov-report\\index.html",
+    "define": "node ./dist/boggleDefine.js",
+    "solve": "cls && node ./dist/boggleSample.js",
+    "simulate": "cls && node ./dist/boggleStats.js"
   },
   "files": [
     "dist/**",

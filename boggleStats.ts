@@ -23,5 +23,7 @@ for (let i = 0; i < samples; i++) {
 }
 
 for (let s = 3; s < 17; s++) {
-    console.log(`${s}: Odds: ${stats[s].count / samples}, Average: ${stats[s].sum / samples} Example: ${sampleWords[s]}`)
+    if (stats[s].count > 0) {
+        console.log(`${s}: Odds: ${stats[s].count / samples}, Average: ${stats[s].sum / samples} Example: ${sampleWords[s]}`);
+    }
 }
